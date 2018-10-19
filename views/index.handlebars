@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
         <h2>These are the recipes:</h2>
         
         <ul id="recipe-list" class="list-group">
@@ -10,10 +9,13 @@
           <li data-id="{{this.id}}" class="list-group-item">
             <h3>{{this.name}}</h3>
             <p>Cuisine: {{this.cuisine}}</p>
-            <p>Instructions: {{this.instructions}}</p>            
+            <p>Instructions: {{this.instructions}}</p>
+            <p>Allergies: {{this.allergy}}</p>           
           </li>
           {{/each}}
         </ul>
+        <br>
+        <button class="btn"><a href="/new">Add Recipe</a></button>
       </div>
     </div>
   </div>
