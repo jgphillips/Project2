@@ -4,6 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     name: DataTypes.STRING,
     instructions: DataTypes.TEXT,
     cuisine: DataTypes.STRING,
+    allergy: DataTypes.STRING
   });
   return Recipe;
 };

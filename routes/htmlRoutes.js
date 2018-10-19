@@ -5,12 +5,27 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
 
     db.recipe.findAll({}).then(function(dbRecipes) {
-      console.log(dbRecipes);
       
-      res.render("index", {
-        msg: "Welcome!",
+      res.render("index", {        
         recipes: dbRecipes
       });
+    });
+  });
+
+  app.get("/new", function(req, res) {
+    res.render("addrecipe", {});
+  });
+
+  app.post("/new", function(req, res) {
+
+    db.recipe.create({
+      name: req.body.recipe,
+      cuisine: req.body.cuisine,
+      instructions: req.body.instructions,
+      allergy: req.body.allergies
+    }).then(function() {
+      
+      res.redirect("/");
     });
   });
 
