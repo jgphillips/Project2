@@ -9,7 +9,7 @@ USE foodDB;
 CREATE TABLE Recipe
 (
 	id INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-	recipe_name varchar(30),
+	recipe_name varchar(30) NOT NULL DEFAULT '',
 	instructions varchar(800) NOT NULL,
     cuisine varchar(30) NOT NULL
 );
