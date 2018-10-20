@@ -1,14 +1,28 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // Load index page // home page 
   app.get("/", function(req, res) {
      res.render("index");
   });
 
-  app.get("/new", function(req, res) {
+    // Load login page
+    app.get("/login", function(req, res) {
+      res.render("userLogin");
+   });
+
+   // user login
+
+   app.post("/login",function(req, res) {
+      console.log(req.body.email);
+   });
+
+   // search for recipes
+ 
+    // add recipe
+    app.get("/new", function(req, res) {
     res.render("addrecipe", {});
-  });
+    });
 
  // submit recipes
   app.post("/new", function(req, res) {
@@ -25,36 +39,25 @@ module.exports = function(app) {
   });
 
 
-   // view fav recipes  -  logged in users
+   // users view favorite recipes
    app.get("/favorite", function(req, res) {
-    
-    db.recipe.findAll({}).then(function(dbRecipes) {
-      res.render("favoriteRecipes", {        
-        recipes: dbRecipes
-      });
-    });
- 
-  });
-
-
-  app.get('/', function(req, res) {
-    
-
-    })
-
-
- 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+    db.recipe.findAll({}).then(function(dbrecipe) {
+      res.render("favoriteRecipes", {
+        recipes: dbrecipe
       });
     });
   });
+
+
+  
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
   });
 };
+
+      
+
+  
+
