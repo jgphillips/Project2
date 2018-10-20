@@ -6,6 +6,20 @@
     "host": "localhost",
     "dialect": "mysql"
   },
+  "christine": {
+    "username": "root",
+    "password": null,
+    "database": "food2DB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "jameel": {
+    "username": "root",
+    "password": "root",
+    "database": "foodDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
   "test": {
     "username": "root",
     "password": null,
@@ -19,3 +33,6 @@
     "dialect": "mysql"
   }
 }
+
+
+
