@@ -21,4 +21,10 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  app.get("/api/search/:ingredient", function(req,res){
+    db.Recipe.findAll({ where: { ingredient: req.params.ingredient } }).then(function(dbRecipes){
+      res.json(dbRecipes);
+    });
+  });
 };
