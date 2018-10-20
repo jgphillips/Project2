@@ -1,4 +1,3 @@
-
 <!-- Start Navbar Container -->
    <div class = "container">
      <div class = "row">
@@ -13,7 +12,7 @@
             <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">    
                   <li class = "nav-item"><a class = "nav-link" href="#searchRecipes">SEARCH RECIPES</a></li>
-                   <li class = "nav-item"><a class = "nav-link" href="/favorite">FAVOURITE RECIPES</a></li>
+                   <li class = "nav-item"><a class = "nav-link" href="/">FAVOURITE RECIPES</a></li>
                    <li class = "nav-item"><a class = "nav-link" href="/new">ADD RECIPES</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#loginPage">LOGIN</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#signUp">SIGN UP</a></li>
@@ -24,10 +23,23 @@
   </div>
   </div>
  </div>  <!-- End Navbar Container -->
- <form>
-      <input type="text" name="ingredient">
-      <input type="text" name="cuisine">
-      <input type="submit" value="Submit">    
- </form>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+
+
+     <br>
+
+    <div class="row" id = "recipesection">
+      <div class="col-8 offset-2">
+          <h2>Your Requested Recipes:</h2>
+        
+          <ul id="recipe-list" class="list-group">
+              {{#each recipes}}
+             <li data-id="{{this.id}}" class="list-group-item">
+               <h3>{{this.title}}</h3>
+               <img src="{{this.image}}" alt="image">
+               <p>Used Ingredients: {{this.usedIngredientCount}}</p>        
+          </li>
+          {{/each}}
+        </ul>
+        <br>
+      </div>
+    </div>
