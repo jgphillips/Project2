@@ -33,7 +33,3 @@ module.exports = function(app) {
       res.json(dbRecipes);
     });
   });
-
-};
-
-  
