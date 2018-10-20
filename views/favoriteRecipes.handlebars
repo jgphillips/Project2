@@ -1,4 +1,3 @@
-
 <!-- Start Navbar Container -->
    <div class = "container">
      <div class = "row">
@@ -13,7 +12,7 @@
             <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">    
                   <li class = "nav-item"><a class = "nav-link" href="#searchRecipes">SEARCH RECIPES</a></li>
-                   <li class = "nav-item"><a class = "nav-link" href="/favorite">FAVOURITE RECIPES</a></li>
+                   <li class = "nav-item"><a class = "nav-link" href="/">FAVOURITE RECIPES</a></li>
                    <li class = "nav-item"><a class = "nav-link" href="/new">ADD RECIPES</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#loginPage">LOGIN</a></li>
                   <li class = "nav-item"><a class = "nav-link" href="#signUp">SIGN UP</a></li>
@@ -26,9 +25,27 @@
  </div>  <!-- End Navbar Container -->
 
 
+     <br>
+
+    <div class="row" id = "recipesection">
+      <div class="col-8 offset-2">
+          <h2>Enter your recipe:</h2>
+        
+          <ul id="recipe-list" class="list-group">
+              {{#each recipes}}
+             <li data-id="{{this.id}}" class="list-group-item">
+               <h3>{{this.name}}</h3>
+               <p>Cuisine: {{this.cuisine}}</p>
+               <p>Instructions: {{this.instructions}}</p>
+              <p>Allergies: {{this.allergy}}</p>           
+          </li>
+          {{/each}}
+        </ul>
+        <br>
+        <button class="btn"><a href="/new">Add Recipe</a></button>
+      </div>
+    </div>
+ 
 
 
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>

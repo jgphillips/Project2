@@ -3,19 +3,14 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-
-    db.recipe.findAll({}).then(function(dbRecipes) {
-      
-      res.render("index", {        
-        recipes: dbRecipes
-      });
-    });
+     res.render("index");
   });
 
   app.get("/new", function(req, res) {
     res.render("addrecipe", {});
   });
 
+ // submit recipes
   app.post("/new", function(req, res) {
 
     db.recipe.create({
@@ -25,10 +20,30 @@ module.exports = function(app) {
       allergy: req.body.allergies
     }).then(function() {
       
-      res.redirect("/");
+      res.redirect("/favorite");
     });
   });
 
+
+   // view fav recipes  -  logged in users
+   app.get("/favorite", function(req, res) {
+    
+    db.recipe.findAll({}).then(function(dbRecipes) {
+      res.render("favoriteRecipes", {        
+        recipes: dbRecipes
+      });
+    });
+ 
+  });
+
+
+  app.get('/', function(req, res) {
+    
+
+    })
+
+
+ 
   // Load example page and pass in an example by id
   app.get("/example/:id", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
