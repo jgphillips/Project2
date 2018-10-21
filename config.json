@@ -1,0 +1,45 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "food2DB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "christine": {
+    "username": "root",
+    "password": null,
+    "database": "food2DB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "loren": {
+    "username": "root",
+    "password": null,
+    "database": "foodDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "jameel": {
+    "username": "root",
+    "password": "root",
+    "database": "foodDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
+
+
+
