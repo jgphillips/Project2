@@ -28,8 +28,4 @@ module.exports = function(app) {
     });
   });
   
-  app.get("/api/search/:name", function(req,res){
-    db.recipe.findAll({ where: { name: req.params.name } }).then(function(dbRecipes){
-      res.json(dbRecipes);
-    });
-  });
+};

@@ -3,7 +3,7 @@
 --DROP DATABASE IF EXISTS foodDB;--
 --CREATE DATABASE foodDB;--
 
-USE foodDB;
+USE foodAPP;
 
 -- CREATE TABLE Recipe
 -- (

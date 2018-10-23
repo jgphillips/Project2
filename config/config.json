@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "food2DB",
+    "database": "foodAPP",
     "host": "localhost",
     "dialect": "mysql"
   },
   "christine": {
     "username": "root",
     "password": null,
-    "database": "food2DB",
+    "database": "foodAPP",
     "host": "localhost",
     "dialect": "mysql"
   },
