@@ -10,9 +10,13 @@ INSERT INTO Ingredient (ingredient_name, category) VALUES('Eggs', 'Proteins'), (
 INSERT INTO Recipe (recipe_name, instructions, cuisine) VALUES ('Zucchini Pasta', 'Cut zucchini into thin strips. Cook in boiling water for one minute. Add cooked zucchini and pesto to a non-stick skillet. Cook on medium heat.', 'Lunch');
 INSERT INTO Ingredient (ingredient_name, Category) VALUES('Zucchini', 'Vegetables'), ('Pesto', 'Sauces');
 
-INSERT INTO Favorites (item) VALUES ('');
+-- Users 1 --
+INSERT INTO users (username) VALUES('Fred');
+-- Users 2 --
+INSERT INTO users (username) VALUES('test@test.ca');
 
 -- View Ingredients and recipes and favorites in the food database --
 SELECT * FROM Ingredient
 SELECT * FROM Recipe
 SELECT * FROM Favorites
+

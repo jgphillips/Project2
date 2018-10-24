@@ -1,31 +1,24 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all favs
+  app.get("/api/favoriterecipes", function(req, res) {
+    db.favorites.findAll({}).then(function(favorites) {
+      res.json(favorites);
     });
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/favoriterecipes", function(req, res) {
+    db.favorites.create(req.body).then(function(favorites) {
+      res.json(favorites);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Delete an example by ids
+  app.delete("/api/favoriterecipes", function(req, res) {
+    db.favorites.destroy({ where: { id: req.params.id } }).then(function(favorites) {
+      res.json(favorites);
     });
   });
-
-  app.get("/api/ingredient/:ingredient", function(req,res){
-    db.recipe.findAll({ where: { ingredient: req.params.ingredient } }).then(function(dbRecipes){
-      res.json(dbRecipes);
-    });
-  });
-  
 };
