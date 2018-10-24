@@ -4,7 +4,7 @@ var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
-app.use(express.static('views/images'));
+//app.use(express.static('views/images'));
 
 // The API object contains methods for each kind of request we'll make
 var API = {
