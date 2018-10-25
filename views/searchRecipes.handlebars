@@ -6,10 +6,6 @@
                 <div class="container ">
                     <div class="navbar-header">
                         <a id="logo" class="navbar-brand" href="#"> Welcome Back </a>
-                        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span
-                                class="sr-only">Toggle
-                                navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span
-                                class="icon-bar"></span></button>
                     </div>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -24,29 +20,25 @@
         </nav>
     </div>
 </div>
-</div>
+
 <!--Navbar container ends -->
 
 <!-- PAGE CONTENT-->
-<div class="pimg1">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-                <div id="imaginary_container">
-                    <form class="search-form text-center" method="post">
-                        <div id="search-form-div">
-                            <input id="searchRecipe" type="text" class="form-control" placeholder="Search for recipes" />
-                             <a id="searchRecipeButton" name="button"><i id="searchIcon" class="glyphicon glyphicon-search pull-right"></i></a>
-                            <button type="submit" class="btn btn-primary" id="btnSearchRecipe">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+
+<div class="searchcontainer">
+    <div class="row">
+          <form class="search-form text-center" method="post">
+                 <div id="search-form-div">
+                      <input id="searchRecipe" type="text" class="form-control" placeholder="Search for recipes" />
+                         <a id="searchRecipeButton" name="button"><i id="searchIcon" class="glyphicon glyphicon-search pull-right"></i></a>
+                         <button type="submit" class="btn btn-primary" id="btnSearchRecipe">Search</button>
+                  </div>
+          </form>
     </div>
 </div>
 
-<div class="container">
+
+<div class="searchcontainer">
     <div class="row">
         <div class="col-md-12">
             <div id="results"> </div>
@@ -54,10 +46,17 @@
     </div>
 </div>
 
+<!-- PAGE CONTENT ENDS -->
+
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
     <!-- Footer Elements -->
-    <div class="container">
+    <div class="container-elements">
+
+          <div class="row">
+            <img src="/images/feedthepanda.jpg">
+         </div>
+
         <!-- Grid row-->
         <div class="row">
             <!-- Grid column -->
@@ -68,7 +67,7 @@
                     <i class="fa fa-github"></i>
                     &ensp;
                     <i class="fa fa-instagram"></i>
-                    &ensp;-
+                    &ensp;
                     <i class="fa fa-pinterest"></i>
                     &ensp;
                     <i class="fa fa-stack-overflow"></i>
@@ -86,11 +85,10 @@
     </div>
     <!-- Footer Elements -->
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright</div>
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/apiRecipe.js"></script>
+<script src="/js/index.js"></script>

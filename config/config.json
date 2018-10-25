@@ -13,6 +13,13 @@
     "host": "localhost",
     "dialect": "mysql"
   },
+  "loren": {
+    "username": "root",
+    "password": null,
+    "database": "foodDB",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
   "jameel": {
     "username": "root",
     "password": "root",

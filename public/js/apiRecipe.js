@@ -33,10 +33,10 @@ $(document).ready(function(){
           var div = $("<div>");
           var img = $("<img>");
           var cardBlock = $("<div>");
-          var title = $("<h4>").text(recipeItem.recipe.label);
-          var dietLabels = $("<p>").text(recipeItem.recipe.dietLabels);
-          var fullRecipe = $("<a>").text(recipeItem.recipe.fullRecipe);
-          var favButton =$("<button>").text("save");
+          var title = $("<h5>").text(recipeItem.recipe.label);
+          var dietLabels = $("<p>").text("Diet Labels : " + recipeItem.recipe.dietLabels);
+          var fullRecipe = $("<a>").text("Full Recipe");
+          var favButton =$("<button>").text("Save Recipe");
         
           //Add attributes to elements
           colDiv.attr({
@@ -64,6 +64,7 @@ $(document).ready(function(){
           dietLabels.attr({
             style: "font-weight:bold;color:black"
           })
+
 
           fullRecipe.attr({
             "href": recipeItem.recipe.url,

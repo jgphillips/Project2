@@ -9,6 +9,10 @@ module.exports = function(app) {
   app.get("/login", function(req, res) {
       res.render("userLogin");
    });
+    // Loads the register page for the user to register
+  app.get("/signup", function(req, res) {
+    res.render("userRegister");
+ });
   // current user logged in sees home page
    app.post("/login",function(req, res) {
     console.log(req.body.email);
