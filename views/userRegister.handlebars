@@ -1,11 +1,11 @@
-<!-- NavBar Container: feed the panda current-->
+<!-- Start Navbar Container -->
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container ">
           <div class="navbar-header">
-            <a id="logo" class="navbar-brand" href="#"> FEED THE PANDA </a>
+            <a id="logo" class="navbar-brand" href="#">FEED THE PANDA </a>
           </div>
         </div>
         <div class="collapse navbar-collapse">
@@ -15,74 +15,59 @@
           </ul>
         </div>
     </div>
-    </nav>
+    </nav> <!-- End Navbar -->
   </div>
 </div>
-</div>
+</div> <!-- End Navbar Container -->
 
-<!--Scrolling site-->
-<div class="pimg1">
-  <div class="ptext">
-    <span class="border">
-      TO LIVE WELL IS TO EAT WELL
-    </span>
-  </div>
-</div>
+<!-- Signup -->
+<form id="login" method="POST" action="/login">
+  <div class="container" id="signup">
 
-<section class="section section-light">
-  <h2>3 Easy Steps</h2>
-  <br>
-  <br>
-  <p>
-    <!-- Comment: The How Too -->
-    <div class="features-clean ">
-      <div class="container">
-        <div class="row features">
-          <div class="col-md-4 col-sm-6 item">
-            <img src="/images/user.png">
-            <br><br>
-            <h3 class="name">Sign-Up or login</h3>
-            <p class="description"> Create an account</p>
-          </div>
-          <div class="col-md-4 col-sm-6 item">
-            <img src="/images/add.png">
-            <br><br>
-            <h3 class="name">Add and Save Recipes</h3>
-            <p class="description">Allows you to create original recipes</p>
-          </div>
-          <div class="col-md-4 col-sm-6 item">
-            <img src="/images/search.png">
-            <br><br>
-            <h3 class="name">Search For Recipes</h3>
-            <p class="description">Search for recipes by ingredient name.</p>
-          </div>
+    <h3>Sign Up</h3>
 
-        </div>
-      </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Joe Public">
     </div>
-    <!--End-->
-  </p>
-</section>
 
-<div class="pimg1">
-  <div class="ptext">
-    <span class="border trans">
-      SignUp/LogIn Now
-    </span>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1"> I'm not a robot</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+
+    <div class="form-group">
+      <a href="/login" class="already">You already have an account? Login here.</a>
+    </div>
+
   </div>
-</div>
 
+</form>
 
 
 <!-- Footer -->
-<footer class="page-footer font-small cyan darken-3">
+<footer class="page-footer font-small cyan darken-3" >
   <!-- Footer Elements -->
   <div class="container">
-
 
     <div class="row">
       <img src="/images/feedthepanda.jpg">
     </div>
+
 
     <!-- Grid row-->
     <div class="row">
