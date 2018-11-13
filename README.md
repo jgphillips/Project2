@@ -1,2 +1,3 @@
-# Project2
-Second Group project
+# FeedThePanda
+
+## Project 2 : https://feed-the-panda.herokuapp.com/

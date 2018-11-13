@@ -148,22 +148,25 @@ li a:hover {
 /*==============================================================*/
 /* FOOTER */
 /*==============================================================*/
-footer {
-  text-align: center;
-  background-color: #fff;
-  
-}
 
-/*
-.footer {
-  position: fixed;
+footer {
+ /* position: fixed;*/
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color:black;
   color: white;
   text-align: center;
-} */
+} 
+
+
+#footerimagecenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 
 .addRecipeContainer {
@@ -178,9 +181,11 @@ footer {
 }
 
 
- 
 
-
-
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
  
