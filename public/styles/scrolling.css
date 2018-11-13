@@ -15,7 +15,21 @@ body, html{
   }
   
   
+  .video-container{
+    position:relative;
+    /*opacity:0.90; */
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color: transparent;
   
+    /*
+      fixed = parallax
+      scroll = normal
+    */
+    background-attachment:fixed;
+
+  }
   .pimg1, .pimg2, .pimg3{
     position:relative;
     /*opacity:0.90; */
